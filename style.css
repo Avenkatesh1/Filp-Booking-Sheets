@@ -1,0 +1,135 @@
+* {
+  border: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --mobile-width: 325px;
+  --mobile-height: 650px;
+  --mobile-radius: 25px;
+  --separator-height: 500px;
+  --bg: #010101;
+  --mobile-bg: #11f0e1;
+  --intro-bg: #555558;
+  --font-color: #000000;
+  --transition: transform 0.7s ease-in-out;
+}
+
+.container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--bg);
+}
+
+.name {
+  font-family: "Quicksand", sans-serif;
+  font-family: "Open Sans", sans-serif;
+  font-style: italic;
+  font-size: 26px;
+  margin-top: 10px;
+  color: white;
+}
+
+.layout {
+  width: var(--mobile-width);
+  height: var(--mobile-height);
+  margin: 30px 0;
+  border-radius: var(--mobile-radius);
+  perspective: 500px;
+  overflow: hidden;
+  color: var(--font-color);
+  background: linear-gradient(#5de0e6, #004aad);
+  box-shadow: 0 0 20px 1px #1ba5b5d1;
+}
+.layout .notification-header {
+  position: fixed;
+  top: 5px;
+  width: 100%;
+  padding: 5px 15px;
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+  font-family: "Open Sans", sans-serif;
+  font-weight: bold;
+  z-index: 6;
+}
+.layout .actions {
+  position: fixed;
+  top: 37px;
+  width: 100%;
+  padding: 50px;
+  display: flex;
+  justify-content: space-between;
+  font-size: 20px;
+  z-index: 6;
+}
+.layout .book-cover {
+  position: relative;
+  height: var(--separator-height);
+  width: calc(var(--mobile-width) * 2);
+  left: -52.5%;
+  border-top-left-radius: var(--mobile-radius);
+  border-top-right-radius: var(--mobile-radius);
+  background-color: var(--intro-bg);
+  transform-style: preserve-3d;
+  transform-origin: 50% 40%;
+  transition: var(--transition);
+  z-index: 4;
+}
+.layout .book-top {
+  width: 170px;
+  position: absolute;
+  top: 180px;
+  left: 250px;
+  z-index: 5;
+  transform: translateZ(28.5px);
+}
+.layout .book-side {
+  position: absolute;
+  top: 430px;
+  left: 222px;
+  transform: translateY(-15px) translateX(0px) translateZ(15px) rotateX(104deg);
+}
+.layout .book-cover:hover {
+  transform: rotateX(75deg) translateZ(3px) scale(0.75);
+}
+.layout .book-cover:hover + .UntoldCoding {
+  transform: translateY(-302px);
+}
+.layout .book-cover:hover + .UntoldCoding .icon {
+  transform: rotateX(180deg);
+}
+.layout .UntoldCoding {
+  height: var(--separator-height);
+  padding: 50px;
+  transition: var(--transition);
+  background: white;
+}
+.layout .UntoldCoding .header {
+  display: flex;
+  align-items: center;
+}
+.layout .UntoldCoding .title {
+  font-family: "Quicksand", sans-serif;
+  font-size: 26px;
+  margin-bottom: 10px;
+}
+.layout .UntoldCoding .author {
+  font-family: "Open Sans", sans-serif;
+  font-style: italic;
+  margin-bottom: 20px;
+}
+.layout .UntoldCoding .icon {
+  transform-origin: top;
+  transition: var(--transition);
+}
+.layout .UntoldCoding .body {
+  font-family: "Quicksand", sans-serif;
+}
+.layout .UntoldCoding .body p:first-child {
+  margin-bottom: 15px;
+}
