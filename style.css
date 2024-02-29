@@ -5,11 +5,11 @@
 }
 
 :root {
-  --mobile-width: 325px;
-  --mobile-height: 650px;
+  --mobile-width: 335px;
+  --mobile-height: 550px;
   --mobile-radius: 25px;
   --separator-height: 500px;
-  --bg: #010101;
+  --bg: #23b79e;
   --mobile-bg: #11f0e1;
   --intro-bg: #555558;
   --font-color: #000000;
@@ -28,9 +28,9 @@
 .name {
   font-family: "Quicksand", sans-serif;
   font-family: "Open Sans", sans-serif;
-  font-style: italic;
+  font-style:normal;
   font-size: 26px;
-  margin-top: 10px;
+  margin-top: 20px;
   color: white;
 }
 
@@ -42,8 +42,12 @@
   perspective: 500px;
   overflow: hidden;
   color: var(--font-color);
-  background: linear-gradient(#5de0e6, #004aad);
+  background: linear-gradient(#5de0e6, #5e8ac5);
   box-shadow: 0 0 20px 1px #1ba5b5d1;
+  /* color: #fff; */
+}
+.layout .time{
+  color: #fff;
 }
 .layout .notification-header {
   position: fixed;
